@@ -1,7 +1,6 @@
 # LambdaMart
 Python implementation of LambdaMart
 
-LambdaMART API:
 LambdaMART(**kwargs)
 
 Parameters:
