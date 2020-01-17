@@ -8,7 +8,6 @@ import numpy as np
 
 class LambdaMART:
     class QueriesGroup:
-        """ Group of Queries """
         def __init__(self, assessor, is_test=False):
             # if evaluation - no need to update scores 
             self.is_test = is_test
@@ -69,7 +68,6 @@ class LambdaMART:
             tree+=1
 
             for query, indexes in enumerate(self.doc_indexes):
-                # update dcg scores in each query 
                 self.queries[query].make_step(y_pred[indexes])
 
             grads = np.concatenate([query.gradients   for query in self.queries])
@@ -80,8 +78,6 @@ class LambdaMART:
         return func
 
     def __data_processing(self, X, y, qid, is_test):
-        """ 
-        """
         print("Preprocessing data ...")
         self.X = X
         self.y = y
