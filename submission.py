@@ -42,7 +42,7 @@ def ndcg_score(ground_truth, predictions, k=5):
 
     return np.mean(scores)
 
-X_train, y_train, qid_train = get_data("data/l2r/train.txt")
+X_train, y_train, qid_train = get_data("data/train.txt")
 params = {   'max_depth':   3,
          'learning_rate': 0.1,
           'n_estimators': 1,
@@ -52,9 +52,9 @@ model = LambdaMART(**params)
 #model.load("Model")
 model.fit(X_train, y_train, qid_train)
 
-X_test, _, qid_test = get_data("data/l2r/test.txt")
+X_test, _, qid_test = get_data("data/test.txt")
 preds = model.predict(X_test, qid_test)
-subm = pd.read_csv("data/l2r/sample.made.fall.2019")
+subm = pd.read_csv("data/sample_submission.csv")
 subm["DocumentId"] = preds
 model.save("Model")
 subm.to_csv("subm.csv", index = False)
