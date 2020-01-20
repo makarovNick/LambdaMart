@@ -43,10 +43,10 @@ def ndcg_score(ground_truth, predictions, k=5):
     return np.mean(scores)
 
 X_train, y_train, qid_train = get_data("data/train.txt")
-params = {   'max_depth':   3,
+params = {   'max_depth':  6,
          'learning_rate': 0.1,
-          'n_estimators': 1,
-          #'num_leaves'  :  65 ,
+          'n_estimators': 2000,
+                'n_jobs': -1,
 }
 model = LambdaMART(**params)
 #model.load("Model")
