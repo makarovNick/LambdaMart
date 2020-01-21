@@ -1,6 +1,6 @@
 numpy
 tqdm
-lightgbm
+xgboost
 pandas
 joblib
 sklearn
