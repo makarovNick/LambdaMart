@@ -3,9 +3,7 @@ from LambdaMart import LambdaMART
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.datasets import load_svmlight_file
 from joblib import Memory
-from tqdm import tqdm
 import pandas as pd
-import numpy as np
 import warnings
 
 warnings.filterwarnings("ignore")
