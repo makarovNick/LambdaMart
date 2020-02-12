@@ -1,5 +1,5 @@
-# LambdaMart
-Python implementation of LambdaMart
+# LambdaMART
+Python implementation of LambdaMART
 
 LambdaMART(**kwargs)
 
