@@ -1,4 +1,4 @@
-from LambdaMart import LambdaMART
+from LambdaMART import LambdaMART
 
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.datasets import load_svmlight_file
